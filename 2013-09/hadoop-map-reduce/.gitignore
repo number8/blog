@@ -1,2 +1,7 @@
 # Ignore uncompressed input data
 data/*
+java/mapreduce/target/classes/*
+java/mapreduce/target/maven-archiver/*
+java/mapreduce/target/surefire/*
+java/mapreduce/target/surefire-reports/*
+java/mapreduce/target/test-classes/*
