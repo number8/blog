@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    UIVersioning doesn't work for Layouts, because their path is explicitly set on the Views.
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

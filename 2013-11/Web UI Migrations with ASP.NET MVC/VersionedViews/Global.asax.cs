@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using VersionedViews.ViewEngines;
 
 namespace VersionedViews
 {
@@ -14,6 +15,10 @@ namespace VersionedViews
     {
         protected void Application_Start()
         {
+            // Reset the View Engines
+            System.Web.Mvc.ViewEngines.Engines.Clear();
+            System.Web.Mvc.ViewEngines.Engines.Add(new UIVersionedRazorViewEngine());
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

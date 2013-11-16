@@ -10,7 +10,12 @@ namespace VersionedViews.Controllers
     {
         public override int UIVersion
         {
-            get { return base.UIVersion; }
+            get 
+            {
+                var UIVersion = 1;
+                Int32.TryParse(this.ControllerContext.HttpContext.Request.QueryString["UIVersion"], out UIVersion);
+                return UIVersion;
+            }
         }
 
         public ActionResult Index()
